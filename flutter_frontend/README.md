@@ -1,16 +1,24 @@
-# flutter_frontend
+# Personal Notes - Flutter Frontend
 
-A new Flutter project.
+A minimal, modern notes app with local data persistence.
 
-## Getting Started
+## Features
+- Add, edit, delete, and view notes
+- Instant search (title and content)
+- Local persistence with SQLite (sqflite)
+- Responsive layout for phones (list) and tablets (grid)
+- Light theme with primary #1976D2, secondary #424242, accent #FFC107
 
-This project is a starting point for a Flutter application.
+## Run
+- flutter pub get
+- flutter run
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Structure
+- lib/
+  - main.dart: App entry, providers, routes, theme
+  - src/models/note.dart: Note entity
+  - src/data/notes_db.dart: SQLite helper
+  - src/data/notes_repository.dart: ChangeNotifier state + CRUD
+  - src/screens/notes_list_screen.dart: List/search/add screen with drawer
+  - src/screens/note_edit_screen.dart: Add/edit screen
+  - src/widgets/note_card.dart: Note tile/card UI
